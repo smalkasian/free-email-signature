@@ -597,6 +597,12 @@ def _is_safe_hex(segment: str) -> bool:
 # ------------------------------------------------------------------------------------
 
 
+@app.api_route("/", methods=["GET", "HEAD"])
+def root():
+    """Answer the bare API host with 200 so uptime checks and crawlers don't log a 404."""
+    return {"status": "ok"}
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
