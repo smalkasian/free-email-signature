@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { templates, SAMPLE_DATA, SAMPLE_PHOTOS } from '../templates';
 import { StyleOptions } from '../types';
 import { useSeo } from '../seo';
+import { TEMPLATE_DETAILS } from '../templateDetails';
 
 const PREVIEW_STYLE: StyleOptions = { accentColor: '#1B8FF2', separatorColor: '#e5e7eb', iconColor: '#6b7280', addressTwoLines: false };
 import { PageHero } from '../components';
@@ -26,49 +27,6 @@ const POPUP_MESSAGES = [
   "You just clicked an upsell link out of habit, didn't you? That's what the internet has done to us. Everything here is free. Always will be.",
   "There is no premium build hiding somewhere. You have already seen everything. It is all free.",
 ];
-
-const TEMPLATE_DETAILS: Record<string, { tagline: string; whenToUse: string }> = {
-  professional: {
-    tagline: 'A polished corporate signature with photo, dividers, and clear contact hierarchy.',
-    whenToUse: 'Best for client-facing roles, sales, recruiting, and anyone in a buttoned-up industry where a headshot reinforces trust.',
-  },
-  minimal: {
-    tagline: 'Pure text, a single divider, and not a pixel of decoration.',
-    whenToUse: 'Best for engineers, writers, founders, and anyone who finds heavy signatures embarrassing on a plain-text reply.',
-  },
-  modern: {
-    tagline: 'Accent bar on the left with contemporary spacing and typography.',
-    whenToUse: 'Best for startups, designers, and product folks who want a touch of brand color without looking like a banner ad.',
-  },
-  bold: {
-    tagline: 'A colored header bar and strong type for maximum visual presence.',
-    whenToUse: 'Best for agencies, freelancers, and anyone using their signature as a small piece of personal branding.',
-  },
-  compact: {
-    tagline: 'A condensed, one-line-feeling layout that takes up the least possible space.',
-    whenToUse: 'Best for high-volume email senders, support teams, and anyone who replies thirty times a day and hates seeing their own giant signature in every thread.',
-  },
-  elegant: {
-    tagline: 'A centered serif layout with symmetric dividers and quiet, refined typography.',
-    whenToUse: 'Best for consultants, lawyers, writers, and anyone in a field where a classic, understated look reads as more credible than a splash of brand color.',
-  },
-  sidebar: {
-    tagline: 'A colored side panel holds your photo and name next to a clean block of contact details.',
-    whenToUse: 'Best for people who want a business-card feel with a touch of brand color, without the signature taking over the message.',
-  },
-  stacked: {
-    tagline: 'A centered single column with the photo on top and everything aligned down the middle.',
-    whenToUse: 'Best for personal brands, creators, and anyone who wants a balanced, symmetric signature that reads well on both desktop and mobile.',
-  },
-  corporate: {
-    tagline: 'A formal two-column layout with labeled contact rows and a short accent rule.',
-    whenToUse: 'Best for finance, legal, enterprise sales, and anyone whose signature needs to look like it came out of a brand guidelines document.',
-  },
-  creative: {
-    tagline: 'A softly tinted card with an accent bar across the top and a rounded photo.',
-    whenToUse: 'Best for designers, marketers, and small teams who want a friendly, branded card that still renders cleanly in every email client.',
-  },
-};
 
 export default function Templates() {
   const [popupMessage, setPopupMessage] = useState<string | null>(null);
@@ -125,7 +83,9 @@ export default function Templates() {
 
                 {/* Description */}
                 <div className="flex-1 lg:max-w-md">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.name} Email Signature</h2>
+                  <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                    <Link to={`/templates/${t.id}`} className="hover:text-brand-blue transition-colors">{t.name} Email Signature</Link>
+                  </h2>
                   <p className="text-gray-600 mb-3">{detail?.tagline || t.description}</p>
                   {detail?.whenToUse && (
                     <p className="text-sm text-gray-500 mb-6">{detail.whenToUse}</p>
@@ -141,6 +101,12 @@ export default function Templates() {
                     className="bg-brand-pink hover:bg-brand-pink-dark text-white rounded-md px-6 py-3 font-semibold transition-colors inline-block"
                   >
                     Use This Template
+                  </Link>
+                  <Link
+                    to={`/templates/${t.id}`}
+                    className="ml-4 text-sm font-medium text-brand-blue hover:text-brand-blue-hover transition-colors"
+                  >
+                    Layout and tips
                   </Link>
                   <button
                     type="button"

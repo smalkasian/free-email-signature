@@ -2,9 +2,10 @@
 title: "Why Your Emails Break in Dark Mode (and How to Fix It)"
 description: "Dark mode can wreck a carefully designed email. Here is why it happens and practical fixes for logos, signatures, and HTML emails."
 slug: email-in-dark-mode
-date: 2026-03-16
+date: 2026-09-22
 author: Samuel Malkasian
 tags: email design, dark mode, html email, email signature, troubleshooting
+category: signatures
 image: https://images.unsplash.com/photo-1513595207829-9f414c0665f6?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Why Your Emails Break in Dark Mode (and How to Fix It)"
 imageCredit: Unsplash

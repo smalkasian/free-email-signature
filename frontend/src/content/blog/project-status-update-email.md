@@ -2,9 +2,10 @@
 title: "How to Write a Project Status Update Email"
 description: "A good status update keeps everyone aligned without a meeting. Learn a repeatable format for progress, risks, and next steps."
 slug: project-status-update-email
-date: 2025-06-22
+date: 2026-04-21
 author: Samuel Malkasian
 tags: project management, status update, workplace communication, email writing, productivity
+category: work
 image: https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write a Project Status Update Email"
 imageCredit: Unsplash

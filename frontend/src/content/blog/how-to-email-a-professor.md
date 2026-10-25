@@ -2,9 +2,10 @@
 title: "How to Email a Professor (Templates for Students)"
 description: "Emailing a professor the right way gets faster, friendlier replies. Learn the format and see templates for common student requests."
 slug: how-to-email-a-professor
-date: 2026-02-05
+date: 2026-09-08
 author: Samuel Malkasian
 tags: students, academic email, email writing, college, etiquette
+category: career
 image: https://images.unsplash.com/photo-1514369118554-e20d93546b30?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Email a Professor (Templates for Students)"
 imageCredit: Unsplash

@@ -2,9 +2,10 @@
 title: "How to Write a Thank-You Email After Any Occasion"
 description: "Learn how to write a thank-you email for any occasion, from job interviews to client referrals, with timing tips, structure, and real examples you can copy."
 slug: thank-you-email
-date: 2025-08-22
+date: 2026-06-06
 author: Samuel Malkasian
 tags: thank you email, email writing, professional communication, etiquette, job search
+category: writing
 image: https://images.unsplash.com/photo-1602045486350-4e53a69865c6?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write a Thank-You Email After Any Occasion"
 imageCredit: Unsplash

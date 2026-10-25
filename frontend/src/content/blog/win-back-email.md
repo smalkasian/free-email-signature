@@ -2,9 +2,10 @@
 title: "Win-Back Emails: How to Re-Engage Inactive Subscribers"
 description: "Inactive subscribers drag down your results. Learn how to write win-back emails that revive interest or cleanly part ways."
 slug: win-back-email
-date: 2025-06-12
+date: 2026-04-11
 author: Samuel Malkasian
 tags: email marketing, win-back, retention, re-engagement, subscribers
+category: marketing
 image: https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Win-Back Emails: How to Re-Engage Inactive Subscribers"
 imageCredit: Unsplash

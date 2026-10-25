@@ -16,6 +16,8 @@ import AppleMailSignature from './pages/AppleMailSignature';
 import MacSignatureGenerator from './pages/MacSignatureGenerator';
 import GmailSignatureGenerator from './pages/GmailSignatureGenerator';
 import SignatureBestPractices from './pages/SignatureBestPractices';
+import TemplateDetail from './pages/TemplateDetail';
+import Changelog from './pages/Changelog';
 import ConsentBanner from './cmp/ConsentBanner';
 import { AdSenseBanner } from './components';
 
@@ -26,6 +28,8 @@ const DONATE_URL = import.meta.env.VITE_DONATE_URL || '';
 // Optional contact page for feedback / template requests. When unset, the
 // footer links are hidden so forks never point at someone else's contact form.
 const CONTACT_URL = (import.meta.env.VITE_CONTACT_URL || '').replace(/\/+$/, '');
+// Optional public source repo, linked in the footer when set.
+const SOURCE_URL = import.meta.env.VITE_SOURCE_URL || '';
 
 function Layout() {
   const location = useLocation();
@@ -179,6 +183,10 @@ function Layout() {
                 <li><Link to="/create" className="hover:text-gray-900 transition-colors">Create Signature</Link></li>
                 <li><Link to="/blog" className="hover:text-gray-900 transition-colors">Blog</Link></li>
                 <li><Link to="/about" className="hover:text-gray-900 transition-colors">About</Link></li>
+                <li><Link to="/changelog" className="hover:text-gray-900 transition-colors">Changelog</Link></li>
+                {SOURCE_URL && (
+                  <li><a href={SOURCE_URL} target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition-colors">Source Code</a></li>
+                )}
               </ul>
             </div>
             <div>
@@ -290,6 +298,8 @@ export default function App() {
         <Route index element={<Home />} />
         <Route path="/create" element={<Create />} />
         <Route path="/templates" element={<Templates />} />
+        <Route path="/templates/:id" element={<TemplateDetail />} />
+        <Route path="/changelog" element={<Changelog />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
         <Route path="/about" element={<About />} />

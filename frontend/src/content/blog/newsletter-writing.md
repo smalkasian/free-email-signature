@@ -2,9 +2,10 @@
 title: "How to Write a Newsletter People Actually Open"
 description: "A practical guide to writing an email newsletter readers look forward to, from format and voice to subject lines and a consistent schedule."
 slug: newsletter-writing
-date: 2025-11-30
+date: 2026-07-28
 author: Samuel Malkasian
 tags: newsletters, email marketing, content writing, audience, email tips
+category: marketing
 image: https://images.unsplash.com/photo-1599008633840-052c7f756385?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write a Newsletter People Actually Open"
 imageCredit: Unsplash

@@ -2,9 +2,10 @@
 title: "Email Personalization That Doesn't Feel Creepy"
 description: "Personalization boosts replies, but overdoing it backfires. Learn how to personalize emails in a way that feels helpful, not invasive."
 slug: email-personalization
-date: 2025-07-23
+date: 2026-05-17
 author: Samuel Malkasian
 tags: email marketing, personalization, email writing, customer experience, outreach
+category: marketing
 image: https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email Personalization That Doesn't Feel Creepy"
 imageCredit: Unsplash

@@ -2,9 +2,10 @@
 title: "Email Signature Etiquette: Dos and Donts"
 description: "Learn email signature etiquette with clear dos and donts. Practical rules on length, contact info, formatting, fonts, links, and tone for professional email."
 slug: email-signature-etiquette
-date: 2026-01-31
+date: 2026-09-01
 author: Samuel Malkasian
 tags: email signature, etiquette, professional email, business communication, email tips
+category: signatures
 image: https://images.unsplash.com/photo-1681505526188-b05e68c77582?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email Signature Etiquette: Dos and Donts"
 imageCredit: Unsplash

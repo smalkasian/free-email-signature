@@ -2,9 +2,10 @@
 title: "Should You Put a Photo in Your Email Signature?"
 description: "A headshot can make your signature warmer or cluttered. Learn when a photo helps, when it hurts, and how to add one the right way."
 slug: email-signature-photo
-date: 2026-01-29
+date: 2026-08-27
 author: Samuel Malkasian
 tags: email signature, personal branding, signature design, professional image, email tips
+category: signatures
 image: https://images.unsplash.com/photo-1544654803-b69140b285a1?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Should You Put a Photo in Your Email Signature?"
 imageCredit: Unsplash

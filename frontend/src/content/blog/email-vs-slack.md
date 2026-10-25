@@ -2,9 +2,10 @@
 title: "Email vs Slack: When to Use Each at Work"
 description: "Should it be an email or a Slack message? A clear guide to choosing the right channel so your message lands and nothing important gets lost."
 slug: email-vs-slack
-date: 2025-10-11
+date: 2026-07-05
 author: Samuel Malkasian
 tags: workplace communication, email vs slack, remote work, productivity, team communication
+category: work
 image: https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email vs Slack: When to Use Each at Work"
 imageCredit: Unsplash

@@ -2,9 +2,10 @@
 title: "How to Use ChatGPT to Write Emails (Prompts and Examples)"
 description: "Learn how to use ChatGPT to write faster, clearer emails, with copy-and-paste prompts, real examples, and tips that keep your voice human."
 slug: how-to-use-chatgpt-to-write-emails
-date: 2026-02-22
+date: 2026-09-16
 author: Samuel Malkasian
 tags: ai email, chatgpt, email writing, productivity, prompts
+category: writing
 image: https://images.unsplash.com/photo-1677442135136-760c813028c0?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Use ChatGPT to Write Emails (Prompts and Examples)"
 imageCredit: Unsplash

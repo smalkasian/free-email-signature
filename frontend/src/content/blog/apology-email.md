@@ -2,9 +2,10 @@
 title: "How to Write an Apology Email (Professional Examples)"
 description: "Learn how to write a professional apology email that rebuilds trust. Get clear structure, real examples, and templates for common workplace situations."
 slug: apology-email
-date: 2026-04-25
+date: 2026-10-04
 author: Samuel Malkasian
 tags: apology email, email writing, professional communication, workplace, email templates
+category: writing
 image: https://images.unsplash.com/photo-1608389168343-ba8aa0cb3a63?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write an Apology Email (Professional Examples)"
 imageCredit: Unsplash

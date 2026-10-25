@@ -2,9 +2,10 @@
 title: "How to Write a Cold Email That Gets a Reply"
 description: "Learn how to write a cold email that actually gets a reply, with real example emails, subject line tips, and a simple structure you can use today."
 slug: cold-email-outreach
-date: 2025-07-28
+date: 2026-05-20
 author: Samuel Malkasian
 tags: cold email, email writing, outreach, communication, networking
+category: customers
 image: https://images.unsplash.com/photo-1490222939321-2a267366a124?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write a Cold Email That Gets a Reply"
 imageCredit: Unsplash

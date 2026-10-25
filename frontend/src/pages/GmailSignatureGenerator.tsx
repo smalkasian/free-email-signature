@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AdSenseBanner, PageHero } from '../components';
 import { useSeo } from '../seo';
+import { SEO_PAGES } from '../seo.data';
 
 export default function GmailSignatureGenerator() {
   useSeo({
@@ -12,6 +13,7 @@ export default function GmailSignatureGenerator() {
       <PageHero
         title="Free Gmail Signature Generator"
         image="https://images.unsplash.com/photo-1620287341401-e2945a4b9daa?w=1600&q=80&auto=format&fit=crop"
+        updated={SEO_PAGES['/free-gmail-signature-generator'].updated}
       />
       <section className="py-16 sm:py-20 bg-page-bg-alt">
         <div className="mx-auto max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6 lg:px-8">

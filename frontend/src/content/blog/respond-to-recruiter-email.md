@@ -2,9 +2,10 @@
 title: "How to Respond to a Recruiter's Email"
 description: "A recruiter reached out. Learn how to reply whether you are interested, not interested, or just curious, with templates for each situation."
 slug: respond-to-recruiter-email
-date: 2026-01-24
+date: 2026-08-26
 author: Samuel Malkasian
 tags: career, job search, recruiters, email writing, professional communication
+category: career
 image: https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Respond to a Recruiter's Email"
 imageCredit: Unsplash

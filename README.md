@@ -2,6 +2,8 @@
 
 Create professional email signatures without signing up, logging in, or paying. Pick a template, fill in your details, copy, paste into Gmail or Outlook. Done.
 
+**Use it live at [freesignature.co](https://freesignature.co)**, or browse the [templates](https://freesignature.co/templates) and [changelog](https://freesignature.co/changelog).
+
 Built by [Carpathian](https://carpathian.ai). Open source under MIT.
 
 ## Quick Start (macOS)

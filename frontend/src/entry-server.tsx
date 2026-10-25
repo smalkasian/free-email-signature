@@ -11,6 +11,10 @@ import { StaticRouter } from 'react-router';
 import App from './App';
 import { SEO_PAGES } from './seo.data';
 import { posts } from './blog';
+import { templates } from './templates';
+import { TEMPLATE_DETAILS } from './templateDetails';
+import { templateSeo } from './pages/TemplateDetail';
+import { lastUpdated as changelogUpdated } from './changelog';
 
 export interface RouteMeta {
   path: string;
@@ -30,6 +34,16 @@ export function getRoutes(): RouteMeta[] {
       title: meta.title,
       description: meta.description,
       noindex: !!meta.noindex,
+      lastmod: path === '/changelog' ? changelogUpdated : meta.updated,
+    });
+  }
+
+  for (const t of templates) {
+    routes.push({
+      path: `/templates/${t.id}`,
+      ...templateSeo(t.name, TEMPLATE_DETAILS[t.id].tagline),
+      noindex: false,
+      lastmod: SEO_PAGES['/templates'].updated,
     });
   }
 

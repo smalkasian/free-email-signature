@@ -2,9 +2,10 @@
 title: "How to Write Emails That Look Great on Mobile"
 description: "Most emails are opened on a phone. Learn how to write and format emails that are easy to read and act on from a small screen."
 slug: mobile-friendly-emails
-date: 2025-08-27
+date: 2026-06-08
 author: Samuel Malkasian
 tags: mobile email, email design, email formatting, readability, email tips
+category: signatures
 image: https://images.unsplash.com/photo-1512428559087-560fa5ceab42?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write Emails That Look Great on Mobile"
 imageCredit: Unsplash

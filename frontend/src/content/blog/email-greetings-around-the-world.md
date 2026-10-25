@@ -2,9 +2,10 @@
 title: "Email Greetings Around the World: A Quick Cultural Guide"
 description: "A practical cultural guide to email greetings around the world, with examples for the US, UK, Germany, Japan, France, and more, plus tips for global teams."
 slug: email-greetings-around-the-world
-date: 2025-12-18
+date: 2026-08-10
 author: Samuel Malkasian
 tags: email greetings, email etiquette, cross-cultural communication, professional emails, business writing
+category: writing
 image: https://images.unsplash.com/photo-1521245585918-35fd32bf376f?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email Greetings Around the World: A Quick Cultural Guide"
 imageCredit: Unsplash

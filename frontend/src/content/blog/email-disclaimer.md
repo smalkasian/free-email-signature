@@ -2,9 +2,10 @@
 title: "Email Confidentiality Disclaimers: Do You Really Need One?"
 description: "Do you really need an email disclaimer? Learn what confidentiality notices actually do, when they help, and how to write one that is short and useful."
 slug: email-disclaimer
-date: 2025-08-29
+date: 2026-06-11
 author: Samuel Malkasian
 tags: email disclaimer, email etiquette, confidentiality, professional email, compliance
+category: signatures
 image: https://images.unsplash.com/photo-1759310610325-2c7cb621e5e3?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email Confidentiality Disclaimers: Do You Really Need One?"
 imageCredit: Unsplash

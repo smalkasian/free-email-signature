@@ -9,17 +9,29 @@ export function Section({ title, children }: { title: string; children: React.Re
   );
 }
 
+// ISO yyyy-mm-dd -> "June 24, 2026". Parsed as local midnight so the day never
+// shifts with the viewer's timezone.
+export function formatDate(iso: string): string {
+  if (!iso) return '';
+  const d = new Date(iso + 'T00:00:00');
+  if (Number.isNaN(d.getTime())) return iso;
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
 // Image header banner used at the top of content pages. The photo sits behind a
 // solid brand-color overlay (no gradient) so white text always has strong
 // contrast. Renders the page's single <h1>, so the page body must not add another.
+// `updated` (ISO date) shows a "Last updated" line for guides.
 export function PageHero({
   title,
   subtitle,
   image,
+  updated,
 }: {
   title: string;
   subtitle?: string;
   image: string;
+  updated?: string;
 }) {
   return (
     <section className="relative py-16 sm:py-20 bg-brand-blue-dark border-b border-black/20 overflow-hidden">
@@ -29,6 +41,11 @@ export function PageHero({
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">{title}</h1>
         {subtitle ? (
           <p className="mt-4 text-white/90 leading-relaxed max-w-2xl mx-auto">{subtitle}</p>
+        ) : null}
+        {updated ? (
+          <p className="mt-4 text-sm text-white/80">
+            Last updated <time dateTime={updated}>{formatDate(updated)}</time>
+          </p>
         ) : null}
       </div>
     </section>

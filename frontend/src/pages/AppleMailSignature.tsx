@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { AdSenseBanner, PageHero } from '../components';
 import { useSeo } from '../seo';
+import { SEO_PAGES } from '../seo.data';
 
 export default function AppleMailSignature() {
   useSeo({
@@ -12,6 +13,7 @@ export default function AppleMailSignature() {
       <PageHero
         title="How to Add an Email Signature in Apple Mail"
         image="https://images.unsplash.com/photo-1543145223-1f9043516739?w=1600&q=80&auto=format&fit=crop"
+        updated={SEO_PAGES['/how-to-add-email-signature-apple-mail'].updated}
       />
       <section className="py-16 sm:py-20 bg-page-bg-alt">
         <div className="mx-auto max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6 lg:px-8">

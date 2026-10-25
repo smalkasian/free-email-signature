@@ -2,9 +2,10 @@
 title: "How to Write a Request Email That Gets a Yes"
 description: "Learn how to write a request email that gets a yes: clear subject lines, the right structure, real examples, and follow-up tips that actually work."
 slug: request-email
-date: 2026-05-01
+date: 2026-10-06
 author: Samuel Malkasian
 tags: request email, email writing, professional communication, email templates, follow-up
+category: writing
 image: https://images.unsplash.com/photo-1557395120-d48fc38063d6?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write a Request Email That Gets a Yes"
 imageCredit: Unsplash

@@ -1,19 +1,44 @@
 import { Link } from 'react-router-dom';
-import { posts } from '../blog';
-import { AdSenseBanner } from '../components';
+import { posts, CATEGORIES, BlogPost } from '../blog';
+import { AdSenseBanner, formatDate } from '../components';
 import { useSeo } from '../seo';
 
-function formatDate(iso: string): string {
-  if (!iso) return '';
-  const d = new Date(iso + 'T00:00:00');
-  if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+function PostCard({ post }: { post: BlogPost }) {
+  return (
+    <Link
+      to={`/blog/${post.slug}`}
+      className="group flex flex-col bg-white rounded-2xl border border-gray-200 ring-1 ring-gray-900/5 shadow-lg overflow-hidden hover:border-brand-pink hover:ring-brand-pink/20 hover:shadow-2xl hover:-translate-y-1 transition-all"
+    >
+      {post.image && (
+        <div className="aspect-[16/10] bg-gray-100 overflow-hidden">
+          <img
+            src={post.image}
+            alt={post.imageAlt}
+            loading="lazy"
+            className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform"
+          />
+        </div>
+      )}
+      <div className="p-5 flex flex-col flex-1">
+        <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-blue transition-colors leading-snug">
+          {post.title}
+        </h3>
+        <p className="mt-2 text-sm text-gray-500 leading-relaxed flex-1">{post.description}</p>
+        <div className="mt-4 text-xs text-gray-400">
+          {formatDate(post.date)} &middot; {post.readingTime} min read
+        </div>
+      </div>
+    </Link>
+  );
 }
 
 export default function Blog() {
   useSeo({ path: '/blog' });
 
   const [featured, ...rest] = posts;
+  const sections = CATEGORIES
+    .map(c => ({ ...c, posts: rest.filter(p => p.category === c.id) }))
+    .filter(c => c.posts.length > 0);
 
   return (
     <>
@@ -69,38 +94,34 @@ export default function Blog() {
               </Link>
             )}
 
-            {/* Grid of the rest */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rest.map((post, i) => (
-                <div key={post.slug} className="contents">
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="group flex flex-col bg-white rounded-2xl border border-gray-200 ring-1 ring-gray-900/5 shadow-lg overflow-hidden hover:border-brand-pink hover:ring-brand-pink/20 hover:shadow-2xl hover:-translate-y-1 transition-all"
-                  >
-                    {post.image && (
-                      <div className="aspect-[16/10] bg-gray-100 overflow-hidden">
-                        <img
-                          src={post.image}
-                          alt={post.imageAlt}
-                          loading="lazy"
-                          className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform"
-                        />
-                      </div>
-                    )}
-                    <div className="p-5 flex flex-col flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 group-hover:text-brand-blue transition-colors leading-snug">
-                        {post.title}
-                      </h3>
-                      <p className="mt-2 text-sm text-gray-500 leading-relaxed flex-1">{post.description}</p>
-                      <div className="mt-4 text-xs text-gray-400">
-                        {formatDate(post.date)} &middot; {post.readingTime} min read
-                      </div>
-                    </div>
-                  </Link>
+            {/* Topic jump links */}
+            <nav aria-label="Blog topics" className="mb-12 flex flex-wrap justify-center gap-2">
+              {sections.map(c => (
+                <a
+                  key={c.id}
+                  href={`#${c.id}`}
+                  className="bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm font-medium text-gray-700 hover:border-brand-blue hover:text-brand-blue transition-colors"
+                >
+                  {c.label}
+                </a>
+              ))}
+            </nav>
 
-                  {/* Single in-feed ad after the sixth card */}
-                  {i === 5 && (
-                    <div className="sm:col-span-2 lg:col-span-3 bg-page-bg-alt rounded-xl">
+            {/* One grid per topic */}
+            <div className="space-y-16">
+              {sections.map((c, i) => (
+                <div key={c.id}>
+                  <section id={c.id} aria-labelledby={`${c.id}-heading`} className="scroll-mt-20">
+                    <h2 id={`${c.id}-heading`} className="text-2xl font-bold text-gray-900">{c.label}</h2>
+                    <p className="mt-2 mb-6 text-gray-500">{c.blurb}</p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                      {c.posts.map(post => <PostCard key={post.slug} post={post} />)}
+                    </div>
+                  </section>
+
+                  {/* Single in-feed ad after the first topic */}
+                  {i === 0 && (
+                    <div className="mt-16 bg-page-bg-alt rounded-xl">
                       <AdSenseBanner />
                     </div>
                   )}

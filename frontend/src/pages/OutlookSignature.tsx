@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PageHero } from '../components';
 import { useSeo } from '../seo';
+import { SEO_PAGES } from '../seo.data';
 
 export default function OutlookSignature() {
   useSeo({
@@ -12,6 +13,7 @@ export default function OutlookSignature() {
       <PageHero
         title="How to Add an Email Signature in Outlook"
         image="https://images.unsplash.com/photo-1602016736566-7ed6a58894bd?w=1600&q=80&auto=format&fit=crop"
+        updated={SEO_PAGES['/how-to-add-email-signature-outlook'].updated}
       />
       <section className="py-16 sm:py-20 bg-page-bg-alt">
         <div className="mx-auto max-w-3xl lg:max-w-5xl xl:max-w-6xl px-4 sm:px-6 lg:px-8">

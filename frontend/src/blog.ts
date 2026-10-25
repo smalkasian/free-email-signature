@@ -8,6 +8,23 @@
 
 import { marked } from 'marked';
 
+// Topics the blog is grouped by on /blog. Each post names one in its
+// `category` frontmatter; listed here in the order they appear on the page.
+export const CATEGORIES = [
+  { id: 'signatures', label: 'Email signatures and sign-offs', blurb: 'What to put in your signature, how it renders, and how to close an email.' },
+  { id: 'writing', label: 'Writing and etiquette', blurb: 'Openings, subject lines, tone, follow-ups, and the unwritten rules of email.' },
+  { id: 'work', label: 'Email at work', blurb: 'Status updates, remote teams, inbox management, and when email beats chat.' },
+  { id: 'career', label: 'Careers and job search', blurb: 'Applications, recruiters, interviews, salary, and leaving a job well.' },
+  { id: 'customers', label: 'Customers and sales', blurb: 'Support replies, outreach, pitches, and getting paid.' },
+  { id: 'marketing', label: 'Marketing and deliverability', blurb: 'Newsletters, lifecycle emails, spam filters, authentication, and the law.' },
+] as const;
+
+export type CategoryId = (typeof CATEGORIES)[number]['id'];
+
+export function getCategory(id: string) {
+  return CATEGORIES.find(c => c.id === id) ?? CATEGORIES[1];
+}
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -15,6 +32,7 @@ export interface BlogPost {
   date: string; // ISO yyyy-mm-dd
   author: string;
   tags: string[];
+  category: CategoryId;
   image: string; // cover image URL
   imageAlt: string;
   imageCredit: string;
@@ -77,6 +95,7 @@ function buildPosts(): BlogPost[] {
       date: data.date || '',
       author: data.author || 'Free Signature Co.',
       tags: data.tags ? data.tags.split(',').map(t => t.trim()).filter(Boolean) : [],
+      category: getCategory(data.category || '').id,
       image: data.image || '',
       imageAlt: data.imageAlt || data.title || '',
       imageCredit: data.imageCredit || '',
@@ -105,7 +124,8 @@ export function relatedPosts(slug: string, limit = 3): BlogPost[] {
     .filter(p => p.slug !== slug)
     .map(p => ({
       post: p,
-      shared: p.tags.filter(t => current.tags.includes(t)).length,
+      // Same-topic posts outrank a single shared tag.
+      shared: p.tags.filter(t => current.tags.includes(t)).length + (p.category === current.category ? 2 : 0),
     }))
     .sort((a, b) => b.shared - a.shared);
   return scored.slice(0, limit).map(s => s.post);

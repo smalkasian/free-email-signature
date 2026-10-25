@@ -1,14 +1,8 @@
 import { Link, useParams } from 'react-router-dom';
-import { getPost, relatedPosts } from '../blog';
-import { AdSenseBanner } from '../components';
+import { getPost, relatedPosts, getCategory } from '../blog';
+import { templates } from '../templates';
+import { AdSenseBanner, formatDate } from '../components';
 import { useSeo } from '../seo';
-
-function formatDate(iso: string): string {
-  if (!iso) return '';
-  const d = new Date(iso + 'T00:00:00');
-  if (Number.isNaN(d.getTime())) return iso;
-  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-}
 
 const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, '') || '';
 
@@ -43,6 +37,7 @@ export default function BlogPost() {
   }
 
   const related = relatedPosts(post.slug, 3);
+  const category = getCategory(post.category);
   const url = `${SITE_URL}/blog/${post.slug}`;
 
   const articleSchema = {
@@ -83,6 +78,8 @@ export default function BlogPost() {
               <Link to="/" className="hover:text-gray-600 transition-colors">Home</Link>
               <span className="mx-2">/</span>
               <Link to="/blog" className="hover:text-gray-600 transition-colors">Blog</Link>
+              <span className="mx-2">/</span>
+              <a href={`/blog#${category.id}`} className="hover:text-gray-600 transition-colors">{category.label}</a>
             </nav>
             <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
               {post.title}
@@ -150,6 +147,29 @@ export default function BlogPost() {
               </div>
             </div>
           </aside>
+
+          {/* Signature articles point at the templates that put the advice into practice. */}
+          {post.category === 'signatures' && (
+            <aside className="mt-12 bg-white rounded-2xl border border-gray-200 ring-1 ring-gray-900/5 shadow-sm p-6 sm:p-7">
+              <h2 className="text-lg font-semibold text-gray-900">Pick a template that fits</h2>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+                Each of our ten free templates has a page showing how it lays out your photo, brand color, and contact
+                details, so you can choose before you build.
+              </p>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {templates.map(t => (
+                  <li key={t.id}>
+                    <Link
+                      to={`/templates/${t.id}`}
+                      className="inline-block bg-page-bg border border-gray-200 rounded-full px-3 py-1 text-sm text-gray-700 hover:border-brand-blue hover:text-brand-blue transition-colors"
+                    >
+                      {t.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          )}
 
           <div className="mt-12 bg-brand-blue-dark rounded-2xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-2">Put it into practice</h2>

@@ -2,9 +2,10 @@
 title: "15 Common Email Mistakes to Avoid"
 description: "Avoid the 15 most common email mistakes that hurt your credibility. Practical fixes for subject lines, tone, formatting, and follow-ups, with real examples."
 slug: email-mistakes-to-avoid
-date: 2025-11-19
+date: 2026-07-23
 author: Samuel Malkasian
 tags: email, communication, writing, productivity, etiquette
+category: writing
 image: https://images.unsplash.com/photo-1519337265831-281ec6cc8514?w=1200&q=80&auto=format&fit=crop
 imageAlt: "15 Common Email Mistakes to Avoid"
 imageCredit: Unsplash

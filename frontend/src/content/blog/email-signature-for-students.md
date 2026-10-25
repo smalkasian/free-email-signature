@@ -2,9 +2,10 @@
 title: "How to Create an Email Signature as a Student"
 description: "Learn how to create a professional student email signature that works for job applications, internships, and faculty emails, with real examples and a free builder."
 slug: email-signature-for-students
-date: 2025-07-04
+date: 2026-04-28
 author: Samuel Malkasian
 tags: email signature, students, job search, email tips, professional communication
+category: signatures
 image: https://images.unsplash.com/photo-1513258496099-48168024aec0?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Create an Email Signature as a Student"
 imageCredit: Unsplash
@@ -63,7 +64,7 @@ Here is a clean, all-purpose version suitable for emailing faculty, advisors, an
 And here is a version tuned for an internship or job application, where you want to surface the most relevant work:
 
 > Aisha Okafor (she/her)
-> B.S. Computer Science, expected May 2025
+> B.S. Computer Science, expected May 2027
 > Georgia Institute of Technology
 > Portfolio: aishaokafor.dev | github.com/aokafor
 > (404) 555-0199
@@ -124,7 +125,7 @@ You do not, and for most students it is better to skip both. Photos can make sig
 
 ### What should I do with my signature after I graduate?
 
-Update it promptly. Change "expected May 2025" to your earned degree, like "B.S. Computer Science, 2025," and swap any `.edu` address that is about to expire for a permanent personal one. If you have started a job, you can shift to your new title and company. Doing this in the first week or two after graduation means your contacts always see current, accurate information, and you avoid the awkward stretch where your signature still calls you a student months after you are not one.
+Update it promptly. Change "expected May 2027" to your earned degree, like "B.S. Computer Science, 2027," and swap any `.edu` address that is about to expire for a permanent personal one. If you have started a job, you can shift to your new title and company. Doing this in the first week or two after graduation means your contacts always see current, accurate information, and you avoid the awkward stretch where your signature still calls you a student months after you are not one.
 
 ## Putting it together
 

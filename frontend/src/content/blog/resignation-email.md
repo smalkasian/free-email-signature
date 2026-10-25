@@ -2,9 +2,10 @@
 title: "How to Write a Resignation Email (Templates)"
 description: "How to write a professional resignation email, with ready-to-use templates, a clear structure, timing tips, and answers to common questions."
 slug: resignation-email
-date: 2025-11-05
+date: 2026-07-17
 author: Samuel Malkasian
 tags: resignation email, career, email templates, professional communication, quitting a job
+category: career
 image: https://images.unsplash.com/photo-1758520144427-ddb02ac74e9d?w=1200&q=80&auto=format&fit=crop
 imageAlt: "How to Write a Resignation Email (Templates)"
 imageCredit: Unsplash

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import type { CountryCode } from 'libphonenumber-js/min';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import Cropper from 'react-easy-crop';
 import type { Area } from 'react-easy-crop';
 import { SignatureFields, SocialLink, TemplateId, StyleOptions } from '../types';
@@ -943,6 +943,120 @@ export default function Create() {
               )}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── SEO / informational content (static, prerendered) ────────
+          Rendered identically on server and client so it is safe to
+          prerender. Gives crawlers real content on the flagship /create
+          route instead of an empty interactive shell. Keep this block when
+          reworking the form above. */}
+      <section className="py-16 sm:py-20 bg-page-bg border-t border-gray-200">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">
+            A free email signature generator that actually stays free
+          </h2>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            This is a browser-based tool for building a professional HTML email signature in about a minute.
+            Type your details into the form above, pick one of ten templates, and copy the result straight into
+            Gmail, Outlook, or Apple Mail. There is no account to create, no email to hand over, and nothing to pay.
+            Your signature is generated entirely in your browser, and the details you type never leave your device
+            unless you choose to upload a photo.
+          </p>
+
+          <h3 className="mt-10 text-xl font-semibold text-gray-900">What you can add to your signature</h3>
+          <ul className="mt-4 space-y-2 text-gray-600 leading-relaxed list-disc list-inside">
+            <li>Your name, job title, and company, laid out with a clear visual hierarchy</li>
+            <li>Email, website, and an address on one line or two, each linked correctly</li>
+            <li>A phone number formatted for your country, in national or international (+44, +1) format</li>
+            <li>A profile photo or company logo, cropped in the browser, with a white, custom color, or transparent background</li>
+            <li>Links to fourteen networks, including LinkedIn, X, Mastodon, GitHub, Instagram, YouTube, TikTok, WhatsApp, Signal, and Discord</li>
+            <li>A brand accent color, divider color, and icon color to match your company style</li>
+          </ul>
+
+          <h3 className="mt-10 text-xl font-semibold text-gray-900">How it works, in three steps</h3>
+          <ol className="mt-4 space-y-3 text-gray-600 leading-relaxed list-decimal list-inside">
+            <li><span className="font-medium text-gray-800">Pick a template.</span> Choose from professional, minimal, modern, bold, compact, elegant, sidebar, stacked, corporate, or creative. Every one is built with inline HTML tables so it survives the quirks of real email clients.</li>
+            <li><span className="font-medium text-gray-800">Fill in your details.</span> The live preview updates as you type, so you see exactly what recipients will see before you copy anything.</li>
+            <li><span className="font-medium text-gray-800">Copy and paste.</span> Use <em>Copy for Email Client</em> to paste formatted straight into your signature settings, or <em>Copy HTML</em> if you would rather work with the raw source.</li>
+          </ol>
+
+          <h3 className="mt-10 text-xl font-semibold text-gray-900">Phone numbers that format themselves</h3>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            Pick your country next to the phone field and the number formats as you type, the way it is written
+            locally. Tick <em>International format</em> and it converts in place once the number is complete: a UK
+            number like 020 7946 0958 becomes +44 20 7946 0958, with the country code added and the leading zero
+            dropped. Partial numbers are never rewritten, and the choice is remembered on your next visit. If you
+            email people in other countries, the international format is the one they can dial without guessing.
+          </p>
+
+          <h3 className="mt-10 text-xl font-semibold text-gray-900">Works in every major email client</h3>
+          <p className="mt-4 text-gray-600 leading-relaxed">
+            The signatures use table-based inline HTML, the format email clients have rendered reliably for decades.
+            That means they display consistently in Gmail on the web, new and classic Outlook on Windows and Mac,
+            Outlook on the web, Apple Mail on macOS, and Thunderbird. If you need the exact clicks for your client,
+            our step-by-step guides for{' '}
+            <Link to="/how-to-add-email-signature-gmail" className="text-brand-blue hover:text-brand-blue-hover font-medium">Gmail</Link>,{' '}
+            <Link to="/how-to-add-email-signature-outlook" className="text-brand-blue hover:text-brand-blue-hover font-medium">Outlook</Link>, and{' '}
+            <Link to="/how-to-add-email-signature-apple-mail" className="text-brand-blue hover:text-brand-blue-hover font-medium">Apple Mail</Link>{' '}
+            walk through each one. You can also browse all ten{' '}
+            <Link to="/templates" className="text-brand-blue hover:text-brand-blue-hover font-medium">signature templates</Link>{' '}
+            side by side first, or see what changed recently in the{' '}
+            <Link to="/changelog" className="text-brand-blue hover:text-brand-blue-hover font-medium">changelog</Link>.
+          </p>
+
+          <h3 className="mt-10 text-xl font-semibold text-gray-900">Frequently asked questions</h3>
+          <div className="mt-4 space-y-6">
+            <div>
+              <h4 className="font-semibold text-gray-900">Is this email signature generator really free?</h4>
+              <p className="mt-1 text-gray-600 leading-relaxed">
+                Yes. Every template and every feature is available to everyone at no cost. There is no premium tier,
+                no watermark added to your signature, and no "Powered by" line forced into your emails. Ads on the
+                page help cover hosting, and that is the whole business model.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">Do I need to create an account?</h4>
+              <p className="mt-1 text-gray-600 leading-relaxed">
+                No. There is no signup and no login. Your work is saved locally in your own browser so you can come
+                back to it, and you can view past signatures on the{' '}
+                <Link to="/my-signatures" className="text-brand-blue hover:text-brand-blue-hover font-medium">My Signatures</Link> page.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">What happens to my data and my photo?</h4>
+              <p className="mt-1 text-gray-600 leading-relaxed">
+                The text you enter stays in your browser and is never sent to us. If you upload a photo, it is stored
+                on our server so it can be linked from your signature. Full details are on the{' '}
+                <Link to="/privacy" className="text-brand-blue hover:text-brand-blue-hover font-medium">privacy</Link> and{' '}
+                <Link to="/security" className="text-brand-blue hover:text-brand-blue-hover font-medium">security</Link> pages.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">Should my photo have a transparent background?</h4>
+              <p className="mt-1 text-gray-600 leading-relaxed">
+                Use transparent for a logo with a cut-out shape, since it sits cleanly on any email background,
+                including dark mode. Choosing transparent saves the image as a PNG, because JPEG cannot store
+                transparency. For a headshot, white or a brand color usually looks more finished. Our guide to{' '}
+                <Link to="/blog/email-signature-photo" className="text-brand-blue hover:text-brand-blue-hover font-medium">signature photos</Link>{' '}
+                covers when a photo helps and when it does not.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-gray-900">Will the signature look right on mobile?</h4>
+              <p className="mt-1 text-gray-600 leading-relaxed">
+                Yes. The templates are built to stay readable on phones as well as desktops, since a large share of
+                email is now read on mobile. For more on that, see our guide to{' '}
+                <Link to="/blog/mobile-friendly-emails" className="text-brand-blue hover:text-brand-blue-hover font-medium">mobile-friendly emails</Link>.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-10 text-gray-600 leading-relaxed">
+            Ready to build yours? Scroll back up, or read our{' '}
+            <Link to="/email-signature-best-practices" className="text-brand-blue hover:text-brand-blue-hover font-medium">email signature best practices</Link>{' '}
+            first to decide what to include and what to leave out.
+          </p>
         </div>
       </section>
     </>

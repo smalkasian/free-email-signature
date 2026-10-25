@@ -2,9 +2,10 @@
 title: "Email Etiquette: 20 Rules for Professional Email"
 description: "Master email etiquette with 20 practical rules for professional email. Learn subject lines, tone, formatting, and replies that get read and respected."
 slug: email-etiquette-rules
-date: 2026-04-23
+date: 2026-10-01
 author: Samuel Malkasian
 tags: email etiquette, professional email, communication, writing tips, workplace
+category: writing
 image: https://images.unsplash.com/photo-1591382696684-38c427c7547a?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email Etiquette: 20 Rules for Professional Email"
 imageCredit: Unsplash

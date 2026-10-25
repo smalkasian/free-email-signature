@@ -2,9 +2,10 @@
 title: "Email Etiquette for Remote and Hybrid Teams"
 description: "Remote work changes the rules of email. Learn the etiquette that keeps distributed teams aligned, respectful of time zones, and easy to work with."
 slug: remote-team-email-etiquette
-date: 2026-05-14
+date: 2026-10-14
 author: Samuel Malkasian
 tags: remote work, email etiquette, hybrid teams, workplace communication, productivity
+category: work
 image: https://images.unsplash.com/photo-1630673287511-4d477913d7a0?w=1200&q=80&auto=format&fit=crop
 imageAlt: "Email Etiquette for Remote and Hybrid Teams"
 imageCredit: Unsplash
